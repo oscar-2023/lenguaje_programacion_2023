@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    // Declaración de variables
+    // Declaración de variables , NA numero de alumnos, PA pago por alumno , TOT costo total
     int NA;
     double PA,TOT, pagoAutobuses;
 

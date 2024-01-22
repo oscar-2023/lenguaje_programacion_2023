@@ -1,50 +1,46 @@
 //elaborar un programa que calcule el area de un triangulo conociendo sus 3 lados e identifique que tipo de triangulo es
 
 #include <iostream>
-using namespace std ;
-int main(){
-    int l1,l2,l3;
-    int base , altura ;
-    int area;
-    cout<<"ingrese el lado 1 "<<endl;
-    cin>>altura;
-    cout<<"ingrese el lado 2"<<endl;
-    cin>>altura;
-    cout<<"ingrese el lado 3"<<endl;
-    cin>> base;
+#include <cmath> // Para la función sqrt
+using namespace std;
+int main() {
+    // Declaración de variables
+    double lado1, lado2, lado3, s, area;// la "s" es el semiperimetro
 
-    area =  base * altura /2.0;
-    cout<<"el area es "<<area<<endl;
-    if (l1 == l2 == l3){
-        cout<<"es equilatero";
-        
-    }
-        if(l1 != l2 != l3){
-        cout<<"es escaleno"<<endl;
-        
-    }
+    // Solicitar al usuario ingresar las longitudes de los lados del triángulo
+    cout << "Ingrese la longitud del lado 1 del triángulo: ";
+    cin >> lado1;
 
-        if (l1 == l2 != l3){
-        cout<<"es isoceles"<<endl;
-        
-    }
-       return 0 ;
-}
-    /*if (base == altura){
-        cout <<"el triangulo es equilatero ";
-        /*if( base != altura){
-            cout<<" el triangulo es escaleno "
+    cout << "Ingrese la longitud del lado 2 del triángulo: ";
+    cin >> lado2;
 
+    cout << "Ingrese la longitud del lado 3 del triángulo: ";
+    cin >> lado3;
+
+    // Verificar validez de los lados para formar un triángulo
+    if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+        // Cálculo del semiperímetro
+        s = (lado1 + lado2 + lado3) / 2;
+
+        // Cálculo del área usando la fórmula de Herón
+        area = sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
+
+        // Identificación del tipo de triángulo
+        if (lado1 == lado2 && lado2 == lado3) {
+            cout << "El triángulo es equilátero." << endl;
+        } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
+            cout << "El triángulo es isósceles." << endl;
+        } else {
+            cout << "El triángulo es escaleno." << endl;
         }
-        if(altura == altura & ! base ){
-            cout<<"es triangulo isoceles";
 
-        }*/
-
-   /* }
-    else{
-        cout<<"el triangulo es isoceles"<<endl;
+        // Mostrar el área calculada
+        cout << "El área del triángulo es: " << area << endl;
+    } else {
+        cout << "Los lados ingresados no forman un triángulo válido." << endl;
     }
-    if()*/
+
+    return 0;
+}
 
 

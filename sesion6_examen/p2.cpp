@@ -4,14 +4,14 @@
 using namespace std ;
 
 int main() {
-    int puntaje = 0;
+    int puntaje = 0; //declaracion de variables
 
     for (int partido = 1; partido <= 20; ++partido) {
         char resultado;
-        
+        // entrada de datos
         cout << "Ingrese el resultado del partido " << partido << " (G para ganado, E para empatado, P para perdido): ";
         cin >> resultado;
-
+// para cada caso segun la descripcion de las condiones de puntaje 
         switch (resultado) {
             case 'G':
             case 'g':
@@ -30,7 +30,7 @@ int main() {
                 --partido;  
         }
     }
-
+//mostrar 
     cout << "El puntaje total del equipo es: " << puntaje << " puntos." << endl;
 
     return 0;

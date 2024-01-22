@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    const int totalPreguntas = 20;
+    int totalPreguntas = 20;
     int puntaje = 0;
 // inicia en 1 , condion menor igual +1
     for (int i = 1; i <= totalPreguntas; ++i) {

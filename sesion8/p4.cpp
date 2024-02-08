@@ -1,3 +1,6 @@
+/*4. Crear una lista de numeros pares e impares - 10*/
+
+
 #include <iostream>
 #include <vector>
 using namespace std;

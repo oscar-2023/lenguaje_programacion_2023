@@ -1,3 +1,11 @@
+/*1. Escriba un programa que simule el juego de adivinar un número. El programa deberá
+generar un número aleatorio entre 1 y 100 y pedirle al usuario que adivine cuál es. Si el
+usuario ingresa un número incorrecto, el programa deberá indicarle si el número a adivinar
+es mayor o menor al que ingresó. El juego termina cuando el usuario adivina el número
+correcto.  se debe almacenar los intentos y el numero maximo de intentos es 5. cuando el usuario
+exceda los intentos el aplicativo debe mostrar una alerta y terminar el programa.*/
+
+
 #include <iostream>
 #include <cstdlib> 
 #include <ctime>  

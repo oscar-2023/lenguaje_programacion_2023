@@ -1,3 +1,11 @@
+/*2. El banco “TingoBank” ha decidido aumentar el límite de crédito de las tarjetas de sus clientes,
+para esto considera que si su cliente tiene tarjeta tipo 1, el aumento será de 25 %;
+si tiene tipo 2, será de 35 %;
+si tiene tipo 3, de 40 %, y para cualquier otro tipo, de 50 %.
+Si la persona tiene deuda con el banco solo se le dará la mitad de incremento de los clientes que no tienen deuda para clientes 1 y 2,
+el resto no tiene incremento. se debe realizar un sistema para que calcule el tipo e indique cual sera el aumento del cliente. usar arreglos
+y struct*/
+
 #include <iostream>
 #include <string>
 using namespace std;

@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -9,13 +9,16 @@ float calcularPromedio(float* notas, int cantidad) {
     for (int i = 0; i < cantidad; ++i) {
         suma += *(notas + i); // Se accede a cada nota usando punteros
     }
-
+    
+    if (cantidad != 0) {
+        return suma / cantidad;
+    } else {
+        return 0; // Devuelve 0 si no hay notas para evitar la división por cero
     }
-    return suma / cantidad;
 }
 
 int main() {
-    const int cantidadNotas = 10;
+    int cantidadNotas = 10;
     float notas[cantidadNotas];
     float* ptrNotas = notas; // Definir un puntero para acceder a las notas
 
@@ -30,35 +33,6 @@ int main() {
     float promedio = calcularPromedio(ptrNotas, cantidadNotas);
 
     // Mostrar el resultado al usuario
-    cout << "El promedio de las notas es: " << promedio << endl;
-
-    return 0;
-}*/
-
-
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main() {
-    int notas[10];
-    int *puntero_notas;
-
-    puntero_notas = notas;
-
-    cout << "Ingrese las notas" << endl;
-    for (int i = 0; i < 10; i++) {
-        cout << "Ingrese la nota " << i + 1 << ": ";
-        cin >> *(puntero_notas + i); // Se utiliza el puntero para acceder a cada posición del arreglo
-    }
-
-    // Calcular el promedio
-    int suma = 0;
-    for (int i = 0; i < 10; i++) {
-        suma += *(puntero_notas + i);
-    }
-    float promedio = suma / 10.0; // Se utiliza 10.0 para la división para obtener un resultado decimal
-
     cout << "El promedio de las notas es: " << promedio << endl;
 
     return 0;

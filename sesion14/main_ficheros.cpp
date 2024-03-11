@@ -38,7 +38,7 @@ int main()
     cout << "se registraron los documentos";
     archivo_curso.close();
 
-    ifstream archivo_mostrar("C:\\FIIS 2023-2\\Lenguaje de programacion\\proyectos c++\\lenguaje_programacion_2023_2\\sesion_14\\persona\\ficheros\\cursos.txt");
+    ifstream archivo_mostrar("C:\\FIIS 2023-2\\Lenguaje de programacion\\proyectos c++\\lenguaje_programacion_2023\\sesion14\\persona\\ficheros\\curso.txt");
 
     if (!archivo_mostrar.is_open())
     {

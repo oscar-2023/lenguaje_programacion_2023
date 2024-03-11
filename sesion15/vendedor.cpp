@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include"persona.cpp"
+#include "persona.h"
 using namespace std;
 
 // Definición de la clase Venta (utilizada dentro de la clase Ventas)
@@ -10,7 +10,7 @@ private:
     int id_vendedor;
     int ventas[];
     int numVentas;
-
+#
 public:
     Vendedor(int _id_vendedor, string _apellidos, string _nombres, string _dni, string _direccion , int ventas ) : Persona(_id_vendedor , _apellidos , _nombres ){
 
